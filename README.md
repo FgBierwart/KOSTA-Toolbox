@@ -1,7 +1,7 @@
 # STAKOOP (Stability Koopman)-Toolbox
 The toolbox presented is based on the paper [] and estimates the basin of attraction of general vector field (polynomial and non-polynomial) using the Koopman operator framework. Hereafter, we detailed the main functions needed for the construction of the Lyapunov functions and its validation. 
 
-# Construction of The Lyapunov function
+# Construction of the Lyapunov function
 The construction of the Lyapunov function is based on functions : main.m and Eigenfunction.m. In function main.m: 
 - The $n$ dimension vector field is initialized as well as the domain of interest.
 
@@ -20,6 +20,6 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
   ```
 - According to parameter *basis* and the structure *s*, the different paremeter of the basis functions are given. For sinstance where monomials are used:
 
-- trunction is a parameter which indicates which projection we are using.    
+- *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following picture where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation.      
 
 # Validation of the Lyapunov function 
