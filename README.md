@@ -9,7 +9,7 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
   K = 0.2; F = [K*sin(x(1)-x(2))-sin(x(1)) K*sin(x(2)-x(1))-sin(x(2))];
   w = 3.5;
   ```
-- The parameter approx.flag has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation $P(x) = [P_1(x),...,P_n(x)]$ (of fixed order $d$) is given using the Taylor series of a min-max approximation. Note that for the Taylor series, constants $c_i$ are given such that $(F_i(x)-P_i(x))<c_i(x)^d$ for some d. 
+- The parameter approx.flag has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation $P(x) = [P_1(x),...,P_n(x)]$ (of fixed order $d$) is given using the Taylor series of a min-max approximation. Note that for the Taylor series, constants $c_i$ are given such that $(F_i(x)-P_i(x))$ for some d.\ 
 
   ```ruby
   choice = 'minimax'; order_rem = 12; 
