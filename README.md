@@ -1,1 +1,1 @@
-# STAK-Toolbox
+# STAKOOP (Stability Koopman)-Toolbox
