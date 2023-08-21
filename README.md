@@ -6,9 +6,9 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 - The vector field is initialized as well as the domain of interest.\
   Example:  
   ```ruby
-F = [x(2) -2*x(1)+(1/3)*x(1)^3-x(2)];
-w = 4;
-```
+  F = [x(2) -2*x(1)+(1/3)*x(1)^3-x(2)];
+  w = 4;
+  ```
 - The parameter approx.flag has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation is given using the Taylor series of a min-max approximation.
 - choice = 'minimax';
 - choice = 'minimax';
