@@ -3,4 +3,9 @@ The toolbox presented is based on the paper [] and estimates the basin of attrac
 
 # Construction of The Lyapunov function. 
 The construction of the Lyapunov function is based on functions : main.m and Eigenfunction.m. 
-- blab
+- In the function main.m: the vector field is initialized as well as the domain of interest. 
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
