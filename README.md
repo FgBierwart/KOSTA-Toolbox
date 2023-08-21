@@ -12,6 +12,8 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 - The parameter *approx.flag* has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation $P(x) = [P_1(x),...,P_n(x)]$ (of fixed order $d$) is given using the Taylor series of a min-max approximation. Note that for the Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert|x\rVert|^d$ for some odd $d$ and $i=1,...,n$. Choising the polynomial approximation is done by the parameter *choice*:   
   ```ruby
   choice = 'minimax'; order_rem = 12; 
+
+  Or
   
   choice = 'Taylor'; order_tayl = 5; c = [0.7;0.7]
   ```
