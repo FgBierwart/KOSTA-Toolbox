@@ -24,4 +24,3 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 
 # Validation of the Lyapunov function 
 to do
-to do
