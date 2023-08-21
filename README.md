@@ -31,7 +31,8 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
   *  *indx* determines wich approximate eigenfunctions are associated to closest eigenvalues of the Jacobian matrix,
     
     
-  Those two inputs allows to compute a Lyapunov candidate and will be used for the validation step described hereafter.
+  Those two outputs allows to compute a Lyapunov candidate and will be used for the validation step described hereafter.
+  
  
 # Validation of the Lyapunov function 
 to do
