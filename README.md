@@ -20,7 +20,9 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
   ```
 - According to parameter *basis* and the structure *s*, the different paremeter of the basis functions are given. For sinstance where monomials are used:
 
-- *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following flowchart where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation.        
+- *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following flowchart where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation.
+
+  ![a cat](Flowchart.png)
 
 # Validation of the Lyapunov function 
 to do
