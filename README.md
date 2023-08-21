@@ -3,7 +3,7 @@ The toolbox presented is based on the paper [] and estimates the basin of attrac
 
 # Construction of The Lyapunov function. 
 The construction of the Lyapunov function is based on functions : main.m and Eigenfunction.m. In function main.m: 
-- The $n$ dimension vector field is initialized as well as the domain of interest.\
+- The $n$ dimension vector field is initialized as well as the domain of interest.\\
   Example:  
   ```ruby
   K = 0.2; F = [K*sin(x(1)-x(2))-sin(x(1)) K*sin(x(2)-x(1))-sin(x(2))];
