@@ -22,7 +22,8 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 
 - *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following flowchart where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation.
 
-  ![a cat](Flowchart.png)
+![Flowchart](https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/318cfb6b-7250-4558-adea-3c1592e85155)
+
 
 # Validation of the Lyapunov function 
 to do
