@@ -10,10 +10,8 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
   w = 4;
   ```
 - The parameter approx.flag has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation is given using the Taylor series of a min-max approximation.
-- choice = 'minimax';
-- choice = 'minimax';
   ```ruby
-choice = 'minimax';
-choice = 'Taylor';
-```
+  choice = 'minimax';
+  choice = 'Taylor';
+  ```
 
