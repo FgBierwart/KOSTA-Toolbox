@@ -24,8 +24,11 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 
 <img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">
 
-- Finally, *Eigenfunction.m* computes the eigenfunctions of the approximated Koopman operator.
-  * test 
 
+- Finally, *Eigenfunction.m* computes the eigenfunctions of the approximated Koopman operator. More precisely, 
+  *  *Vec* contains the coefficient of the approximate eigenfunctions for the basis considered,
+  *  *indx* contains the column of the eigenvalues closest associated to eigenvalues closest to those of the jacobian,
+  Those two inputs allows to compute a Lyapunov candidate and will be used for the validation step described hereafter.
+ 
 # Validation of the Lyapunov function 
 to do
