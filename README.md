@@ -26,7 +26,7 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 
 
 
-- Finally, according *Eigenfunction.m*, this lyapunov candidate is estimated. More precisely, This function gives as input the matrix of approximated eigenvectors and points out those associated to the eigenvalues closest the one of the Jacobian matrix. 
+- Finally, according to the function *Eigenfunction.m*, this lyapunov candidate is estimated. More precisely, This function gives as input the matrix of approximated eigenvectors and points out those associated to the eigenvalues closest the one of the Jacobian matrix. 
  
 # Validation of the Lyapunov function 
 
