@@ -20,19 +20,14 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 ```
 - According to parameter *basis* and the structure *s*, the different paremeter of the basis functions are given. We precise here that up to know, only monomials and gaussian have been implemented.   
 
-- *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following flowchart where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation.
+- *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following flowchart where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation. So, there is 4 different way to construct a Lyapunov candidate. 
 
 <img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">
 
 
 
-- Finally, *Eigenfunction.m* computes the eigenfunctions of the approximated Koopman operator. More precisely, 
-  *  *Vec* contains the coefficient of the approximate eigenfunctions for the basis considered,
-  *  *indx* determines wich approximate eigenfunctions are associated to closest eigenvalues of the Jacobian matrix,
-    
-    
-  Those two outputs allows to compute a Lyapunov candidate and will be used for the validation step described hereafter.
-  
+- Finally, according *Eigenfunction.m*, this lyapunov candidate is estimated. More precisely, This function gives as input the matrix of approximated eigenvectors and points out those associated to the eigenvalues closest the one of the Jacobian matrix. 
  
 # Validation of the Lyapunov function 
-to do
+
+To do
