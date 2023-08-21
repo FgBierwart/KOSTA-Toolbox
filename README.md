@@ -22,7 +22,7 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 
 - *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following flowchart where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation.
 
-<img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">
+<img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">\
 
 
 - Finally, *Eigenfunction.m* computes the eigenfunctions of the approximated Koopman operator. More precisely, 
