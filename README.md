@@ -14,5 +14,5 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
   choice = 'minimax'; order_rem = 12; 
   choice = 'Taylor'; order_tayl = 5; c = [0.7;0.7]
   ```
-  Note the 
+  Note that 
 
