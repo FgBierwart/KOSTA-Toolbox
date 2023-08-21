@@ -23,3 +23,4 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 - *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following picture where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation.      
 
 # Validation of the Lyapunov function 
+to do
