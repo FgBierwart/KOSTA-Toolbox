@@ -29,6 +29,7 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
 - Finally, *Eigenfunction.m* computes the eigenfunctions of the approximated Koopman operator. More precisely, 
   *  *Vec* contains the coefficient of the approximate eigenfunctions for the basis considered,
   *  *indx* determines wich approximate eigenfunctions are associated to closest eigenvalues of the Jacobian matrix,
+    
   Those two inputs allows to compute a Lyapunov candidate and will be used for the validation step described hereafter.
  
 # Validation of the Lyapunov function 
