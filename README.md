@@ -35,7 +35,7 @@ adaptive grid
 
 - SOS validation
 
-  An estimation of the basin of attraction is given by the function *Lyap_certificate*. This function return the value of $\gamma_1$ and $\gamma_2$ such that the $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region delimited by the set $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$.     
+  An estimation of the basin of attraction is given by the function *Lyap_certificate*. This function return the value of $\gamma_1$ and $\gamma_2$ such that the $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region delimited by the set $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$. As illustrated on the flowchart, when a Lyapunov candidate is computed using other basis functions than monomials, a twlever order (default) min-max polynomial approximation of it is constructed for SOS use.      
   
 - Grid validation 
 
