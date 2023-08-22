@@ -32,7 +32,7 @@ The following flowchart shows 4 different ways to construct a Lyapunov candidate
  
 ### Validation of the Lyapunov function 
 
-In this section, we present the two main functions used for validation; They are based on (i) Sum-Of-Squares (SOS) programming and (ii) a “worst case” approach combined with an adaptive grid.
+In this section, we present the two main functions used for validation. They are based on (i) Sum-Of-Squares (SOS) programming and (ii) a “worst case” approach combined with an adaptive grid.
 
 - SOS-based validation
 
