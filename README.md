@@ -37,7 +37,11 @@ adaptive grid
 
   An estimation of the basin of attraction is given by the function *Lyap_certificate*. This function return the value of $\gamma_1$ and $\gamma_2$ such that the $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region delimited by the set $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$. As illustrated on the flowchart, when a Lyapunov candidate is computed using other basis functions than monomials, a twlever order (default) min-max polynomial approximation of it is constructed for SOS use.      
   
-- Grid validation 
+- Grid validation
+
+  An estimation of the basin of attraction using the adaptive grid is done in two step. The first one is for the construction of an approximation of the validity region $\mathcal{S}$. This is done by constructing an adaptive grid where each cells are well in the validity region. The associated function is given by *AGM.m* and returns a matrix containing coordinates and associated stepsize of valid cells. Fianlly, the ROA is computed according to *bisection_grid.m* among the valid cells. 
+
+  **Please note that we only tested *AGM.m* and implemented *bisection_grid.m* in 2D only for polynomial systems. We leave their application of non-polynomial vector fields for future reasearch.**
 
 # References 
 [1] 
