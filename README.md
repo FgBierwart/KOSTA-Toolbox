@@ -1,9 +1,9 @@
 # STAKOOP (Stability Koopman)-Toolbox
-The toolbox presented here is based on the pre-print [1] and estimates the basin of attraction of general vector fields (polynomial and non-polynomial) using a Koopman operator framework (see [2] for further information). Hereafter, we detailed the main functions needed for the construction of the Lyapunov functions and its validation.  
+The STAKOOP toolbox is built upon the results presented in [1]. Its aims at estimating the region of attraction of equilibria for general vector fields (polynomial and non-polynomial) using the Koopman operator framework (see [2] for further information). Hereafter, we detail the main functions needed to construct candidate Lyapunov functions, validate them, and estimate the region of attraction.  
 
 ### Construction of the Lyapunov function
-The construction of the Lyapunov function is based on functions : *main.m* and *Eigenfunction.m*. In function *main.m*:  
-- The $n$ dimension vector field is initialized as well as the domain of interest $\mathbb{X} = [-w,w]^n$. 
+The construction of the Lyapunov function is based on the functions *main.m* and *Eigenfunction.m*. In *main.m*:  
+- The $n$-dimensional vector field is initialized as well as the domain of interest $\mathbb{X} = [-w,w]^n$. 
 
 
   Example ( $n = 2$ ):  
@@ -12,39 +12,40 @@ The construction of the Lyapunov function is based on functions : *main.m* and *
   w = 3.5;
 ```
   
-- The parameter *approx.flag* has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ ( of fixed order $d$ ) is given using the Taylor series of a min-max approximation. Note that for the Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. Choising the polynomial approximation is done by the parameter *choice*:
+- The parameter *approx.flag* has to be set to 0 for polynomial vector fields and 1 for non-polynomial vector fields. In the latter case, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ (of fixed order $d$) is given using Taylor series or min-max approximation. Note that for Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. The polynomial approximation is chosen through the parameter *choice*:
    
 ```ruby
   choice = 'minimax'; order_rem = 12; 
   choice = 'Taylor'; order_tayl = 5; c = [0.7;0.7]
 ```
-- According to parameter *basis* and the structure *s*, the different paremeter of the basis functions are given. We precise here that up to know, only monomials and gaussian have been implemented.   
+- The different paremeters of the basis functions are provided via the parameter *basis* and the structure *s*. In the current version, only monomials and Gaussian radial basis functions are implemented.
 
-- *trunction* is a parameter which indicates which projection we are using. This is a summarize by the following flowchart where dashed arrow indicate polynomial approximation computed using either Taylor or a min-max approximation. So, there is 4 different way to construct a Lyapunov candidate. 
+- The projection used to approximate the Koopman operator is given with the parameter *trunction*.
+
+The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
 
 <img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">
 
 &nbsp;
 
-- Finally, according to the function *Eigenfunction.m*, this lyapunov candidate is estimated. More precisely, This function gives as an output the matrix of approximated eigenvectors and points out those associated to the eigenvalues closest the one of the Jacobian matrix. See [] for more details and documentations of the related function.     
+- Finally, the Lyapunov candidate is computed with the function *Eigenfunction.m*. The function gives as an output the matrix of approximated eigenvectors and indicates those associated to the eigenvalues closest to the eigenvalues of the Jacobian matrix. See [] for more details and documentation of the related function.     
  
 ### Validation of the Lyapunov function 
 
-In this section, we present the two main functions developped for two validation techniques based on (i) Sum-Of-Square (SOS) programming and (ii) a “worst case” approach combined with an
-adaptive grid
+In this section, we present the two main functions used for validation; They are based on (i) Sum-Of-Squares (SOS) programming and (ii) a “worst case” approach combined with an adaptive grid.
 
-- SOS validation
+- SOS-based validation
 
-  An estimation of the basin of attraction is given by the function *Lyap_certificate*. This function return the value of $\gamma_1$ and $\gamma_2$ such that the $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region delimited by the set $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$. As illustrated on the flowchart, when a Lyapunov candidate is computed using other basis functions than monomials, a twlever order (default) min-max polynomial approximation of it is constructed for SOS use.      
+  The region of attraction is estimated with the function *Lyap_certificate*. This function returns the value of $\gamma_1$ and $\gamma_2$ such that the largest set $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$.
   
 - Grid validation
 
-  An estimation of the basin of attraction using the adaptive grid is done in two step. The first one is for the construction of an approximation of the validity region $\mathcal{S}$. This is done by constructing an adaptive grid where each cells are well in the validity region. The associated function is given by *AGM.m* and returns a matrix containing coordinates and associated stepsize of valid cells. Fianlly, the ROA is computed according to *bisection_grid.m* among the valid cells. 
+  An estimation of the region of attraction using an adaptive grid is performed in two steps. The first step provides an approximation of the validity region $\mathcal{S}$. The associated function *AGM.m* returns a matrix containing the coordinates and size of grid cells lying within the validity set. Finally, the region of attraction is computed through a bisection method with *bisection_grid.m*.
 
-  **Please note that we only tested *AGM.m* and implemented *bisection_grid.m* in 2D only for polynomial systems. We leave their application of non-polynomial vector fields for future reasearch.**
+  **Please note that, in the current version, *AGM.m* and *bisection_grid.m* are implemented only for 2D polynomial systems.**
 
 # References 
 [1] add after submission
 
-[2] A. Mauroy, Y. Susuki, and I. Mezi ́c, The Koopman operator in systems and control, Springer, 2020.
+[2] A. Mauroy, Y. Susuki, and I. Mezi´c, The Koopman operator in systems and control, Springer, 2020.
 
