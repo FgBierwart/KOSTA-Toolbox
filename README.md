@@ -3,7 +3,7 @@ The toolbox presented here is based on the pre-print [1] and estimates the basin
 
 # Construction of the Lyapunov function
 The construction of the Lyapunov function is based on functions : main.m and Eigenfunction.m. In function main.m: 
-- The $n$ dimension vector field is initialized as well as the domain of interest.
+- The $n$ dimension vector field is initialized as well as the domain of interest $\mathbb{X} = [-w,w]^n$. 
 
 
   Example ( $n = 2$ ):  
@@ -30,7 +30,14 @@ The construction of the Lyapunov function is based on functions : main.m and Eig
  
 # Validation of the Lyapunov function 
 
-To do
+In this section, we present the two main functions developped for two validation techniques based on (i) Sum-Of-Square (SOS) programming and (ii) a “worst case” approach combined with an
+adaptive grid
+
+- SOS validation
+
+  An estimation of the basin of attraction is given by the function *Lyap_certificate*. This function return the value of $\gamma_1$ and $\gamma_2$ such that the $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region delimited by the set $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$.     
+  
+- Grid validation 
 
 # References 
 [1] 
