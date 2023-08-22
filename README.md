@@ -12,7 +12,7 @@ The construction of the Lyapunov function is based on functions : $\texttt{main.
   w = 3.5;
 ```
   
-- The parameter $\color{royalblue}\texttt{approx.flag}$ has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ ( of fixed order $d$ ) is given using the Taylor series of a min-max approximation. Note that for the Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. Choising the polynomial approximation is done by the parameter $\color{royalblue}\textit{choice}$:
+- The parameter *approx.flag* has to be set as 0 for polynomial vector field and 1 for non-polynomial vector field. For the latter, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ ( of fixed order $d$ ) is given using the Taylor series of a min-max approximation. Note that for the Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. Choising the polynomial approximation is done by the parameter $\color{royalblue}\textsf{choice}$:
    
 ```ruby
   choice = 'minimax'; order_rem = 12; 
