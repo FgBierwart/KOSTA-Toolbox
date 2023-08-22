@@ -1,3 +1,0 @@
-[1] Das, Suddhasattwa, and Dimitrios Giannakis. "Koopman spectra in reproducing kernel Hilbert spaces." Applied and Computational Harmonic Analysis 49.2 (2020): 573-607.
-[2] Kawahara, Yoshinobu. "Dynamic mode decomposition with reproducing kernels for Koopman spectral analysis." Advances in neural information processing systems 29 (2016).
-[3] Kostic, Vladimir, et al. "Learning dynamical systems via koopman operator regression in reproducing kernel hilbert spaces." Advances in Neural Information Processing Systems 35 (2022): 4017-4031.
