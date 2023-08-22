@@ -44,7 +44,7 @@ adaptive grid
   **Please note that we only tested *AGM.m* and implemented *bisection_grid.m* in 2D only for polynomial systems. We leave their application of non-polynomial vector fields for future reasearch.**
 
 # References 
-[1] 
+[1] add after submission
 
 [2] A. Mauroy, Y. Susuki, and I. Mezi ́c, The Koopman operator in systems and control, Springer, 2020.
 
