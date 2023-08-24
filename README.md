@@ -36,7 +36,9 @@ In this section, we present the two main functions used for validation. They are
 
 - SOS-based validation
 
-  The region of attraction is estimated with the function *Lyap_certificate*. This function returns the value of $\gamma_1$ and $\gamma_2$ such that the largest set $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$. 
+  The region of attraction is estimated with the function *Lyap_certificate*. This function returns the value of $\gamma_1$ and $\gamma_2$ such that the largest set $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$.
+
+Remark. SOS-based validation techniques requires the SOSTOOLS toolbox from [3] 
   
 - Grid validation
 
@@ -45,7 +47,10 @@ In this section, we present the two main functions used for validation. They are
   **Please note that, in the current version, *AGM.m* and *bisection_grid.m* are implemented only for 2D polynomial systems.**
 
 # References 
-[1] add after submission
+[1] Bierwart and Mauroy. “A numerical Koopman-based framework to estimate regions of attraction for general vector fields.” Submitted to Communications in Nonlinear Science and Numerical Simulation
 
 [2] A. Mauroy, Y. Susuki, and I. Mezi´c, The Koopman operator in systems and control, Springer, 2020.
+
+[3] S. Prajna, A. Papachristodoulou, and P. A. Parrilo, Introducing sostools: A general purpose sum of squares programming solver, in Proceedings of the 41st IEEE Conference on Decision and Control,
+2002., vol. 1, IEEE, 2002, pp. 741–746
 
