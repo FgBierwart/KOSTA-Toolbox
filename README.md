@@ -43,7 +43,7 @@ In this section, we present the two main functions used for validation. They are
 
 - SOS-based validation
 
-  The region of attraction is estimated with the function *Lyap_certificate*. This function returns the value of $\gamma_1$ and $\gamma_2$ such that the largest set $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$.
+  The region of attraction is estimated with the function *Lyap_certificate.m*. This function returns the value of $\gamma_1$ and $\gamma_2$ such that the largest set $`\{x\in\mathbb{X}~|~\gamma_1\leq V(x) \leq \gamma_2\}`$ is in the validity region $\mathcal{S} =$ $`\{x\in\mathbb{X}~|~\dot{V} < 0\}`$.
 
 **Remark**. SOS-based validation techniques requires the SOSTOOLS toolbox from [3] 
   
