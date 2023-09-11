@@ -35,8 +35,8 @@ The construction of the Lyapunov function is done within two main steps:
 
 &nbsp;
 
-- Finally, the Lyapunov candidate is computed with the function *Eigenfunction.m*. The function gives as an output the matrix of approximated eigenvectors and indicates those associated to the eigenvalues closest to the eigenvalues of the Jacobian matrix. See [2] for more detailed about the construction of this candidate function. 
-
+- Finally, the Lyapunov candidate is computed with the function *Eigenfunction.m*. The function gives as an output the matrix of approximated eigenvectors and indicates those associated to the eigenvalues closest to the eigenvalues of the Jacobian matrix. See [2] for more detailed about the construction of this candidate function. We also refer to the documentation of the matlab function for implementation details.
+  
 ### Validation of the Lyapunov function 
 
 In this section, we present the two main functions used for validation. They are based on (i) Sum-Of-Squares (SOS) programming and (ii) a “worst case” approach combined with an adaptive grid.
