@@ -7,10 +7,10 @@ This section is dedicated to describe how the system is defined in the *main.m* 
 
   Example ( $n = 2$ ):  
 ```ruby
-dim = 2; 
-x = sym('x',[1 dim]);
-K = 0.2; F = [K*sin(x(1)-x(2))-sin(x(1)) K*sin(x(2)-x(1))-sin(x(2))];
-w = 3.5;
+  dim = 2; 
+  x = sym('x',[1 dim]);
+  K = 0.2; F = [K*sin(x(1)-x(2))-sin(x(1)) K*sin(x(2)-x(1))-sin(x(2))];
+  w = 3.5;
 ```
   
 - The parameter *approx.flag* has to be set to 0 for polynomial vector fields and 1 for non-polynomial vector fields. In the latter case, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ (of fixed order $d$) is given using Taylor series or min-max approximation. Note that for Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. The polynomial approximation is chosen through the parameter *choice*:
