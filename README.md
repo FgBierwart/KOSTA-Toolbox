@@ -19,7 +19,9 @@ This section is dedicated to describe how the system is defined in the *main.m* 
 ```
 
 ### Construction of the Lyapunov function
-- The different paremeters of the basis functions are provided via the parameter *basis* and the structure *s*. In the current version, only monomials and Gaussian radial basis functions are implemented.
+The construction of the Lyapunov function is done within two main steps: 
+
+- ... to complete... The different paremeters of the basis functions are provided via the parameter *basis* and the structure *s*. In the current version, only monomials and Gaussian radial basis functions are implemented.
 
 - The projection used to approximate the Koopman operator is given with the parameter *trunction*.
 
