@@ -49,9 +49,9 @@ In this section, we present the two main functions used for validation. They are
   
 - Grid validation
 
-  An estimation of the region of attraction using an adaptive grid is performed in two steps. The first step provides an approximation of the validity region $\mathcal{S}$. The associated function *AGM.m* returns a matrix containing the coordinates and size of grid cells lying within the validity set. Finally, the region of attraction is computed through a bisection method with *bisection_grid.m*.
+  An estimation of the region of attraction using an adaptive grid is performed in two steps. The first step provides an approximation of the validity region $\mathcal{S}$. The associated function $`\texttt{AGM.m}`$ returns a matrix containing the coordinates and size of grid cells lying within the validity set. Finally, the region of attraction is computed through a bisection method with $`\texttt{bisection\_grid.m}`$.
 
-  **Please note that, in the current version, *AGM.m* and *bisection_grid.m* are implemented only for 2D polynomial systems.**
+  **Please note that, in the current version, $`\texttt{AGM.m}`$ and $`\texttt{bisection\_grid.m}`$ are implemented only for 2D polynomial systems.**
 
 # References 
 [1] Bierwart and Mauroy. “A numerical Koopman-based framework to estimate regions of attraction for general vector fields.” Submitted to Communications in Nonlinear Science and Numerical Simulation
