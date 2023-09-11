@@ -20,6 +20,8 @@ This section is dedicated to describe how the system is defined in the function 
   choice = 'Taylor'; order_tayl = 5; c = [0.7;0.7]; 
 ```
 
+**Remark.** The polynomial approximation of the vector field is required for the validation step explain further. 
+
 ### Construction of the Lyapunov function
 The construction of the Lyapunov function is done within two main steps: 
 
