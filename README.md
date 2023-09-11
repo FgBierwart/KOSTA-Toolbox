@@ -25,9 +25,9 @@ This section is dedicated to describe how the system is defined in the function 
 ### Construction of the Lyapunov function
 The construction of the Lyapunov function is done within two main steps: 
 
-- As a first instance, the set of basis function is provided by the function : *Basis.m*. In this version, this function only encodes monomials and gaussian basis function but can easily be adapted for general basis function. In order to construct the Lyapunov function, gradients of basis functions are required. Then, the method allow the two following options:
-    * df
-    * df     
+- As a first instance, the set of basis function is provided by the function : *Basis.m*. In this version, this function only encodes monomials and gaussian basis function but can easily be adapted for general basis function. In order to construct the Lyapunov function, gradients of basis functions are required. Then, the method allow the two following scnerio:
+    * The gradient is given bu the user; 
+    * The gradient is approximated (not known).  
 
 - ... to complete... The different paremeters of the basis functions are provided via the parameter *basis* and the structure *s*. In the current version, only monomials and Gaussian radial basis functions are implemented.
 
