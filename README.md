@@ -25,22 +25,18 @@ This section is dedicated to describe how the system is defined in the function 
 ### Construction of the Lyapunov function
 The construction of the Lyapunov function is done within two main steps: 
 
-- As a first instance, the set of basis function is provided by the function : *Basis.m*. In this version, this function only encodes monomials and gaussian basis function but can easily be adapted for general basis function. In order to construct the Lyapunov function, gradients of basis functions are required. Then, the method allow the two following scnerio:
-    * The gradient is given bu the user; 
-    * The gradient is approximated (not known).  
+- As a first instance, the set of basis function is provided by the function : *Basis.m*. In this version, this function only encodes monomials and gaussian basis function but can easily be adapted for general basis function. In order to construct the Lyapunov function, the gradient of any basis functions is required. Then, the method allows the two following scnerios:
+    * The gradient is given by the user; 
+    * The gradient is approximated (not known).    
 
-- ... to complete... The different paremeters of the basis functions are provided via the parameter *basis* and the structure *s*. In the current version, only monomials and Gaussian radial basis functions are implemented.
-
-- The projection used to approximate the Koopman operator is given with the parameter *trunction*.
-
-The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
+- The projection used to approximate the Koopman operator is given with the parameter *trunction*. The parameter is set as 1 for section projection and 0 for $L^2$ projection. The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
 
 <img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">
 
 &nbsp;
 
-- Finally, the Lyapunov candidate is computed with the function *Eigenfunction.m*. The function gives as an output the matrix of approximated eigenvectors and indicates those associated to the eigenvalues closest to the eigenvalues of the Jacobian matrix. See [] for more details and documentation of the related function.     
- 
+- Finally, the Lyapunov candidate is computed with the function *Eigenfunction.m*. The function gives as an output the matrix of approximated eigenvectors and indicates those associated to the eigenvalues closest to the eigenvalues of the Jacobian matrix. See [2] for more detailed about the construction of this candidate function. 
+
 ### Validation of the Lyapunov function 
 
 In this section, we present the two main functions used for validation. They are based on (i) Sum-Of-Squares (SOS) programming and (ii) a “worst case” approach combined with an adaptive grid.
