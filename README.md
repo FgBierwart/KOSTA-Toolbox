@@ -2,9 +2,6 @@
 The STAKOOP toolbox is built upon the results presented in [1]. Its aims at estimating the region of attraction of equilibria for general vector fields (polynomial and non-polynomial) using the Koopman operator framework (see [2] for further information). Hereafter, we detail the main functions needed to construct candidate Lyapunov functions, validate them, and estimate the region of attraction.  
 
 ### Initialization of the dynamical system. 
-To do 
-
-### Construction of the Lyapunov function
 The construction of the Lyapunov function is based on the functions *main.m* and *Eigenfunction.m*. In *main.m*:  
 - The $n$-dimensional vector field is initialized as well as the domain of interest $\mathbb{X} = [-w,w]^n$. 
 
@@ -21,6 +18,8 @@ The construction of the Lyapunov function is based on the functions *main.m* and
   choice = 'minimax'; order_rem = 12; 
   choice = 'Taylor'; order_tayl = 5; c = [0.7;0.7]
 ```
+
+### Construction of the Lyapunov function
 - The different paremeters of the basis functions are provided via the parameter *basis* and the structure *s*. In the current version, only monomials and Gaussian radial basis functions are implemented.
 
 - The projection used to approximate the Koopman operator is given with the parameter *trunction*.
