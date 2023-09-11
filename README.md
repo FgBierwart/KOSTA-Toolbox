@@ -7,6 +7,8 @@ This section is dedicated to describe how the system is defined in the *main.m* 
 
   Example ( $n = 2$ ):  
 ```ruby
+  dim = 2; 
+  x = sym('x',[1 dim]);
   K = 0.2; F = [K*sin(x(1)-x(2))-sin(x(1)) K*sin(x(2)-x(1))-sin(x(2))];
   w = 3.5;
 ```
