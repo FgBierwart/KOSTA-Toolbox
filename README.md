@@ -14,7 +14,7 @@ This section is dedicated to describe how the system is defined in the function 
   w = 3.5;
 ```
   
-- Depending on the nature of the vector field, we may approximate it by some polynomial. This is done through the parameter *__approx.flag__*. If the vector field is polynomial, the parameter is set as 0 and 1 otherwise. In the latter case, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ (of fixed order $d$) is given using either a Taylor series, or a min-max approximation. Note that for Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. The polynomial type approximation is given through the parameter *choice*:
+- Depending on the nature of the vector field, we may approximate it by some polynomial. This is done through the parameter ***approx.flag***. If the vector field is polynomial, the parameter is set as 0 and 1 otherwise. In the latter case, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ (of fixed order $d$) is given using either a Taylor series, or a min-max approximation. Note that for Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. The polynomial type approximation is given through the parameter *choice*:
    
 ```ruby
   choice = 'minimax'; order_rem = 12; 
@@ -27,10 +27,10 @@ This section is dedicated to describe how the system is defined in the function 
 The construction of the Lyapunov function is done within two main steps: 
 
 - As a first instance, the set of basis function is provided by the function : $`\texttt{Basis.m}`$. In this version, this function only encodes monomials and gaussian basis function but can easily be adapted for general basis function. In order to construct the Lyapunov function, the gradient of any basis functions is required. Then, the method allows the two following scnerios:
-    * The user give sybmolic basis function so that the gradient can be computed (slower). In this case, set $`\texttt{approx.basis}`$ to 0;
-    * The user only give as an input the function via handle function. This situation avoid the use of symbolic and might be faster. In this case, set $`\texttt{approx.basis}`$ to 1;   
+    * The user give sybmolic basis function so that the gradient can be computed (slower). In this case, set ***approx.basis*** to 0;
+    * The user only give as an input the function via handle function. This situation avoid the use of symbolic and might be faster. In this case, set ***approx.basis*** to 1;   
 
-- The projection used to approximate the Koopman operator is given with the parameter $`\texttt{truncation}`$. The parameter is set as 1 for section projection and 0 for $L^2$ projection. The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
+- The projection used to approximate the Koopman operator is given with the parameter ***truncation***. The parameter is set as 1 for section projection and 0 for $L^2$ projection. The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
 
 <img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">
 
