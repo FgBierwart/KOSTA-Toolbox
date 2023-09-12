@@ -28,7 +28,7 @@ The construction of the Lyapunov function is done within two main steps:
 
 - As a first instance, the set of basis function is provided by the function : $`\texttt{Basis.m}`$. In this version, this function only encodes monomials and gaussian basis function but can easily be adapted for general basis function. In order to construct the Lyapunov function, the gradient of any basis functions is required. Then, the method allows the two following scnerios:
     * The user gives sybmolic basis function so that the gradient can be computed (slower). In this case, set ***approx.basis*** to 0;
-    * The user only gives as an input the function via handle function. This situation avoid the use of symbolic and might be faster. In this case, set ***approx.basis*** to 1;   
+    * The user gives as an input handle functions. This situation avoid the use of symbolic and might be faster. In this case, set ***approx.basis*** to 1;   
 
 - The projection used to approximate the Koopman operator is given with the parameter ***truncation***. The parameter is set as 1 for section projection and 0 for $L^2$ projection. The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
 
