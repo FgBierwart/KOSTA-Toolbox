@@ -1,3 +1,4 @@
+
 # STAKOOP (Stability with Koopman)  -  Toolbox
 The STAKOOP toolbox is built upon the results presented in [1]. Its aims at estimating the region of attraction of equilibria for general vector fields (polynomial and non-polynomial) using the Koopman operator framework (see [2] for further information). Hereafter, we detail the main functions needed to construct candidate Lyapunov functions, validate them, and estimate the region of attraction.  
 
@@ -13,7 +14,7 @@ This section is dedicated to describe how the system is defined in the function 
   w = 3.5;
 ```
   
-- Depending on the nature of the vector field, we may approximate it by some polynomial. This is done through the parameter $`\texttt{approx.flag}`$. If the vector field is polynomial, the parameter is set as 0 and 1 otherwise. In the latter case, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ (of fixed order $d$) is given using either a Taylor series, or a min-max approximation. Note that for Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. The polynomial type approximation is given through the parameter *choice*:
+- Depending on the nature of the vector field, we may approximate it by some polynomial. This is done through the parameter *__approx.flag__*. If the vector field is polynomial, the parameter is set as 0 and 1 otherwise. In the latter case, a polynomial approximation $P(x) = [ P_1(x),...,P_n(x) ]$ (of fixed order $d$) is given using either a Taylor series, or a min-max approximation. Note that for Taylor series, constants $c_i$ are given such that $|F_i(x)-P_i(x)|< c_i\lVert x\rVert^{d+1}$ for some odd $d$ and $i=1,...,n$. The polynomial type approximation is given through the parameter *choice*:
    
 ```ruby
   choice = 'minimax'; order_rem = 12; 
