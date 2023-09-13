@@ -1,0 +1,120 @@
+
+% =========================================================================
+% INPUT: 
+% -----
+% 
+% - G : grid where the first block contain final_grid (see AGM.m) and the 
+%       second one is grille_dot. The last coloumn of G is 1 for row 
+%       associated to final_grid and 0 otherwise.    
+%
+% - q : vector of cells (index of G) for which we want to determine wheter 
+%       or not they cross the level curve V_star.  
+%
+% - V : Matrix so that each row corresponds to a cell in G and columns are 
+%       the values of the candidate lyapunov function V at each cells 
+%       corner. For instance, if the cell of corrdinates are (0.5,0.5) with
+%       stepsize 0.1 is encoded by the 45th row of of G, then the 45th row
+%       of V is the value of V over the corners of this cell. 
+%
+% - C : see CrossingCurve_pct.m.   
+%
+% - type : string character which indicates if the cell we are looking at 
+%          needs to be checked from above (min(V) > gam_2) or from below 
+%          (max(V) < gam_1). Indeed, during the bisection, for a set of 
+%          parameters gam_1 and gam_2, we check the cells that intersect 
+%          the level set and the possible neigbours that might intersect 
+%          the cell. For those neighbours, depending the step of bisection 
+%          (bisection from 'top' or 'bottom', we only need to chek beighbor 
+%          such that (max(V) < gam_1) or (min(V) > gam_2). 
+%
+%          See IsValid.m for more details.
+%
+% - K : This vector encodes bounds on the norm of the gradient of V over
+%       the different cells in G. This is needed for the bisection.  
+% 
+% - P : handle function of the lyapunov candidate V
+% 
+% 
+% OUTPUT: 
+% ------
+%
+% - flag : 0 if the level curve does not cross the cells and 1 otherwise.  
+% 
+% =========================================================================
+
+function flag = CrossingCurve(G,q,V,V_star,C,type,K,P)
+
+flag = zeros(length(q),1); 
+
+if(isempty(q)) 
+
+    flag = 0; 
+
+else % if q is no empty...
+    
+    % ... and all elements in q are valid (inside final_grid)
+    if(sum(G(q,end))==length(q)) 
+        
+        count_tc = [];
+        
+        for i = 1:length(q)
+            
+            % we check if each elements in q are valid
+            flag(i) = CrossingCurve_pct(G,V,q(i),V_star,C,type,K(q(i)),P);            
+  
+            if(flag(i)~=0)
+
+                % if the criterion can not ensure that we do not cross the 
+                % cell, we check their neighbors 
+                tmp = Neighbour(G,q(i));
+
+                if(strcmp(type,'top'))
+                    w = min(V(tmp,:),[],2)>V_star;
+                elseif(strcmp(type,'bot'))
+                    w = max(V(tmp,:),[],2)<V_star;
+                end
+                tmp = tmp(w,:);
+                count_tc = unique([count_tc;tmp]); 
+            end 
+
+        end
+
+        [~,b] = intersect(count_tc,q);
+        count_tc(b) = []; 
+
+        if(isempty(count_tc))
+            % if all ellement in q does not cross the cell, it is over...
+
+            clear flag; 
+            flag = 0; 
+
+        else
+            clear flag; 
+            % ... otherwise we need to check the neighbor that we have 
+            % computed. 
+
+            if(sum(G(count_tc,end))==length(count_tc))
+
+                for i = 1:length(count_tc)
+                    flag = CrossingCurve_pct(G,V,count_tc(i),V_star,C,type,K(count_tc(i)),P);
+                    if(flag==1)
+                        break;
+                    end
+                end
+               
+                
+            else
+                flag = 1;
+            end
+            
+
+        end
+
+    else
+        flag = 1;
+    end
+
+end
+
+end
+
