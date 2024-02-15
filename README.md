@@ -1,6 +1,6 @@
 
-# STAKOOP (Stability with Koopman)  -  Toolbox
-The STAKOOP toolbox is built upon the results presented in [1]. Its aims at estimating the region of attraction of equilibria for general vector fields (polynomial and non-polynomial) using the Koopman operator framework (see [2] for further information). Hereafter, we detail the main functions needed to construct candidate Lyapunov functions, validate them, and estimate the region of attraction.  
+# KOSTA (Stability with Koopman)  -  Toolbox
+The KOSTA toolbox is built upon the results presented in [1]. Its aims at estimating the region of attraction of equilibria for general vector fields (polynomial and non-polynomial) using the Koopman operator framework (see [2] for further information). Hereafter, we detail the main functions needed to construct candidate Lyapunov functions, validate them, and estimate the region of attraction.  
 
 ### Initialization of the dynamical system. 
 This section is dedicated to describe how the system is defined in the function : $`\texttt{main.m}`$.    
