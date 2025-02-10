@@ -55,7 +55,7 @@ In this section, we present the two main functions used for validation. They are
   **Please note that, in the current version, $`\texttt{AGM.m}`$ and $`\texttt{bisection\_grid.m}`$ are implemented only for 2D polynomial systems.**
 
 # References 
-[1] Bierwart and Mauroy. “A numerical Koopman-based framework to estimate regions of attraction for general vector fields.” Submitted to Communications in Nonlinear Science and Numerical Simulation
+[1] Bierwart and Mauroy. “A numerical Koopman-based framework to estimate regions of attraction for general vector fields.” Accepted in Nonlinear Dynamics
 
 [2] A. Mauroy, Y. Susuki, and I. Mezi´c, The Koopman operator in systems and control, Springer, 2020.
 
