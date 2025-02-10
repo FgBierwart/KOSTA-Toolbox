@@ -57,7 +57,7 @@ In this section, we present the two main functions used for validation. They are
 # References 
 [1] Bierwart and Mauroy. “A numerical Koopman-based framework to estimate regions of attraction for general vector fields.” Accepted in Nonlinear Dynamics
 
-[2] A. Mauroy, Y. Susuki, and I. Mezi`c, The Koopman operator in systems and control, Springer, 2020.
+[2] A. Mauroy, Y. Susuki, and I. Mezi'c, The Koopman operator in systems and control, Springer, 2020.
 
 [3] S. Prajna, A. Papachristodoulou, and P. A. Parrilo, Introducing sostools: A general purpose sum of squares programming solver, in Proceedings of the 41st IEEE Conference on Decision and Control,
 2002., vol. 1, IEEE, 2002, pp. 741–746
