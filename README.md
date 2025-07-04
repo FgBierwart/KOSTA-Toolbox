@@ -30,7 +30,9 @@ The construction of the Lyapunov function is done within two main steps:
     * The user gives sybmolic basis function so that the gradient can be computed (slower). In this case, set ***approx.basis*** to 0;
     * The user gives as an input handle functions. This situation avoid the use of symbolic and might be faster. In this case, set ***approx.basis*** to 1;   
 
-- The projection used to approximate the Koopman operator is given with the parameter ***truncation***. The parameter is set as 1 for section projection and 0 for $L^2$ projection. The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
+- The projection used to approximate the Koopman operator is given with the parameter ***truncation***. The parameter is set as 1 for section projection and 0 for $L^2$ projection. The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation.
+
+&nbsp;
 
 <img src="https://github.com/FgBierwart/KOSTA-Toolbox/blob/main/Flowchart.png">
 
