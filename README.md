@@ -32,7 +32,7 @@ The construction of the Lyapunov function is done within two main steps:
 
 - The projection used to approximate the Koopman operator is given with the parameter ***truncation***. The parameter is set as 1 for section projection and 0 for $L^2$ projection. The following flowchart shows 4 different ways to construct a Lyapunov candidate, depending on the chosen basis functions and projection operator. The dashed arrows depict the polynomial approximation. 
 
-<img src="https://github.com/FgBierwart/STAK-Toolbox/assets/142835014/f6c583be-ada8-4391-a5ea-8c652e92d738" width="700" height="230">
+![Flowchart](https://github.com/user-attachments/assets/8c10acff-1a32-4f1d-bc68-91a24a0f1428)
 
 &nbsp;
 
